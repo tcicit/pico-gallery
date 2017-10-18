@@ -1,0 +1,21 @@
+
+    <div class="container-fluid" style="background:#444444">  
+        <footer id="footer">
+            <div class="social">
+                {% for social in meta.social %}
+                    <a href="{{ social.url }}" title="{{ social.title }}"><span class="icon-{{ social.icon }}"></span></a>
+                {% endfor %}
+            </div>
+            <a href="http://picocms.org/">Pico</a> was made by <a href="http://gilbert.pellegrom.me">Gilbert Pellegrom</a>
+            and is maintained by <a href="https://github.com/picocms/Pico/graphs/contributors">The Pico Community</a>.
+            Released under the <a href="https://github.com/picocms/Pico/blob/master/LICENSE.md">MIT license</a>.
+        </footer>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="{{ theme_url }}/js/jquery-3.2.1.slim.min.js" ></script>
+    <script src="{{ theme_url }}/js/popper.min.js"> </script>
+    <script src="{{ theme_url }}/js/bootstrap.min.js" ></script>
+  </body>
+</html>
