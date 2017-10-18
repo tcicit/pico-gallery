@@ -1,0 +1,33 @@
+{% include 'header.twig' %}
+ 
+    <div class="container">  
+    
+    <h1>{{meta.title}}</h1>
+
+    <div class="row text-center text-lg-left">
+
+    {% set i = 0 %}
+    {% for image in images %}
+        {% if image %}
+            {% set i = 1 %}
+            <div class="col-lg-3 col-md-4 col-xs-6"> 
+                <a href="{{ image.url }}" class="d-block mb-4 h-100">
+                    <img class="img-fluid img-thumbnail border-0" src="{{ image.url }}" alt="{{ image.name }}" {{ image.size }}>
+                </a>
+            </div> <!-- end col -->
+
+        {% else %}
+            {% if i == 0 %}
+                <h2> No Image in Gallery</h2>
+            {% endif %}
+        {% endif %}
+    {% endfor %}
+    </div> <!-- end row -->
+
+    
+    {{ content }}
+        
+        
+    </div>
+   
+{% include 'footer.twig' %}    
